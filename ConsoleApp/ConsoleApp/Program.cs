@@ -10,6 +10,11 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            Calc c1 = new Calc();
+            c1.num1 = 2.12;
+            c1.num2 = 10;
+            Console.WriteLine(c1.Add());
+            Console.ReadLine();
         }
     }
 }
