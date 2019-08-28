@@ -46,6 +46,7 @@
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn1
@@ -267,6 +268,20 @@
             this.btnClear.TabIndex = 16;
             this.btnClear.Text = "C";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.BackColor = System.Drawing.Color.DimGray;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.ForeColor = System.Drawing.Color.LightGray;
+            this.lblResult.Location = new System.Drawing.Point(356, 387);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(106, 37);
+            this.lblResult.TabIndex = 17;
+            this.lblResult.Text = "Result";
+            this.lblResult.Click += new System.EventHandler(this.lblResult_Click);
             // 
             // Form1
             // 
@@ -275,7 +290,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(854, 463);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnMultiply);
@@ -296,7 +312,9 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.Text = "Calculator App";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -319,6 +337,7 @@
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnDivide;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label lblResult;
     }
 }
 
